@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+.login-main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow-y: auto;
+}
+
+/*login-box-container*/
+
+.login-box-container {
+    width: 35%;
+    height: auto;
+    border-radius: 12px;
+    margin-left: 30px;
+}
+
+.img-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-container img {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.span {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    font-size: 27px;
+}
+
+.login-form-container {
+    width: 100%;
+    height: 40%;
+    margin-top: 20px;
+}
+
+.login-form-container label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.login-form-container input {
+    width: 85%;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height: 35px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border-color: rgba(255, 68, 0, 0.724);
+}
+
+.remember {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.remember-left {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.remember-left input {
+    width: 15px;
+    margin: 0;
+}
+
+.remember-left label {
+    font-size: 12px;
+}
+
+.remember-right {
+    font-size: 14px;
+    text-decoration: none;
+    color: #ff4500;
+    margin-right: 20px;
+}
+
+.remember-right:hover {
+    text-decoration: underline;
+}
+
+.loginBtn {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.loginBtn button {
+    width: 85%;
+    height: 42px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.or {
+    width: 92%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+}
+
+.googleBtn {
+    width: 92%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.googleBtn button {
+    width: 405px;
+    height: 40px;
+    margin-left: 4px;
+}
+
+.term-condetions {
+    width: 90%;
+    height: auto;
+    padding-top: 12px;
+}
+
+.term-condetions p {
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.term-condetions span {
+    color: #ff4500;
+}
+
+.trademark {
+    display: flex;
+    width: 90%;
+    margin: 0;
+    padding-left: 12px;
+}
+.trademark p {
+    font-size: 12px;
+    padding-top: 15px;
+}
+
+.trademark span {
+    color: #ff4500;
+}
