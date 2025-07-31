@@ -47,7 +47,7 @@
                     </form>
                 </div>
                 <div class="or">
-                    <p>________________or continue with________________</p>
+                    <p>___________or continue with____________</p>
                 </div>
 
                 <div class="googleBtn">
