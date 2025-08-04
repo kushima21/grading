@@ -59,11 +59,13 @@
                         <option value="ELS">ELS</option>
                         <option value="GMRC">GMRC</option>
                         <option value="MTB">MTB</option>
-                        <option value="Other Courses">Other Courses</option>
-                        
+                        <option value="Other Courses">Other Courses</option> 
                     </select>
                 </div>
-                
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Create Course</button>
+                    <button type="button" class="btn btn-secondary" onclick="document.querySelector('.course-modal-container').style.display='none'">Cancel</button>
+                </div>
             </form>
     </div>
 @endsection
