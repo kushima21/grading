@@ -103,7 +103,7 @@
                         <span>Admin</span>
                     </a>
 
-                    <a href="{{ url('/course') }}">
+                     <a href="#">
                         <span>Course</span>
                     </a>
                 </div>
@@ -123,7 +123,11 @@
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-bell"></i>
             </div>
-            @yield('content')
+            <div class="content-body">
+                <div class="content-box-content">
+                    <h1>Some features are not yet covered, may introduce breaking changes, and can change at any time.</h1>
+                </div>
+            </div>
         </div>
 
     </div>

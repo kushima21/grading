@@ -10,3 +10,7 @@ Route::get('default', function () {
     return view('layouts.default');
 });
 
+
+Route::get('course', function () {
+    return view('admin.course');
+});
