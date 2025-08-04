@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     @vite(['resources/css/default.css', 'resources/js/app.js'])
     <link rel="icon" href="http://www.yourwebsite.com/favicon.png">
 </head>
@@ -40,7 +42,6 @@
                         <p>ID#: 213122321</p>
                     </div>
                 </div>
-                <i class="fa-solid fa-chevron-down"></i>
                 <div class="logout" id="logoutMenu">
                     <div class="settings">
                         <div class="email">
@@ -116,6 +117,13 @@
             </div>
 
         </nav>
+
+        <div class="main-content">
+            <div class="content-header">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+        </div>
 
     </div>
     <script>
