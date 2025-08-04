@@ -1,165 +1,173 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-html, body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
+    html, body {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+    }
 
-.default-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background-color: white;
-    flex-direction: row;
-}
+    .default-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: white;
+        flex-direction: row;
+    }
 
-.nav-links {
-    width: 300px;
-    height: 100%;
-    box-shadow: 0px 0px 10px;
-    background-color: rgba(15, 15, 31, 0.942);
+    .nav-links {
+        width: 300px;
+        height: 100%;
+        box-shadow: 0px 0px 10px;
+        background-color: rgba(15, 15, 31, 0.942);
 
-}
+    }
 
-.main-nav-contents {
-    width: 100%;
-    height: 100%;
-}
+    .main-nav-contents {
+        width: 100%;
+        height: 100%;
+    }
 
-.nav-header {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
+    .nav-header {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
 
 
-.nav-header img{
-    width: 60px;
-    height: 60px;
-}
+    .nav-header img{
+        width: 60px;
+        height: 60px;
+    }
 
-.gradient-text {
-    background: linear-gradient(45deg, #e32b02, #aa4405); /* Example gradient colors */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    font-style: normal;
-}
+    .gradient-text {
+        background: linear-gradient(45deg, #e32b02, #aa4405); /* Example gradient colors */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        font-style: normal;
+    }
 
-.nav-header p {
-    color: rgba(245, 245, 245, 0.501);
-}
+    .nav-header p {
+        color: rgba(245, 245, 245, 0.501);
+    }
 
-.nav-profile {
-    cursor: pointer;
-    width: 100%;
-    height: 50px;
-    margin-top: 10px;
-    gap: 10px;;
-    align-items: center;
-    display: flex;
-    border-radius: 5px;
-    border-left: 0;
-    border-right: 0;
-    position: relative;
-}
+    .nav-profile {
+        cursor: pointer;
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        gap: 10px;;
+        align-items: center;
+        display: flex;
+        border-radius: 5px;
+        border-left: 0;
+        border-right: 0;
+        position: relative;
+    }
 
-.nav-profile img {
-    width: 40px;
-    margin-left: 5px;
-}
+    .nav-profile img {
+        width: 40px;
+        margin-left: 5px;
+    }
 
-.profile label {
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.894); 
-}
+    .profile label {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.894); 
+    }
 
-.profile p {
-    color: rgba(255, 255, 255, 0.502); 
-    font-size: 12px;
-}
+    .profile p {
+        color: rgba(255, 255, 255, 0.502); 
+        font-size: 11px;
+    }
 
-.logout {
-    width: 270px;
-    height: 110px;
-    margin-top: 10px;
-    position: fixed;
-    border-radius: 10px;
-    margin-left: 10px;
-    display: none;
-    background-color: rgb(19, 19, 45);
-}
+    .logout {
+        width: 270px;
+        height: 110px;
+        margin-top: 10px;
+        position: fixed;
+        border-radius: 10px;
+        margin-left: 10px;
+        display: none;
+        background-color: rgb(19, 19, 45);
+    }
 
-.settings {
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
-    margin: 10px;
-}
-.email {
-    color: rgba(255, 255, 255, 0.737);
-}
-.account {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    margin:1px;
-    margin-top: 7px;
-}
-.account a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.737);
-}
+    .settings {
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        margin: 10px;
+    }
+    .email {
+        color: rgba(255, 255, 255, 0.737);
+        font-size: 12px;
+    }
+    .account {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        margin:1px;
+        margin-top: 7px;
+        padding-top: 5px;
+    }
+    .account a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.737);
+        font-size: 12px;
+    }
 
-/*dashboard-links*/
-.dashboard-links {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    overflow-y: scroll;
-    max-height: 65%;
-}
-.dashboard-links label{
-    font-size: 13px;
-    padding-top: 5px;
-    font-weight: 530;
-    color: rgba(255, 255, 255, 0.349); 
-}
+    /*dashboard-links*/
+    .dashboard-links {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        overflow-y: scroll;
+        max-height: 65%;
+    }
+    .dashboard-links label{
+        font-size: 11px;
+        padding-top: 5px;
+        font-weight: 530;
+        color: rgba(255, 255, 255, 0.349); 
+    }
 
-.dashboard-links a {
-    margin: 10px;
-    color: rgba(255, 255, 255, 0.863); 
-    text-decoration: none;
-    font-weight: 500;
-}
+    .dashboard-links a {
+        margin: 10px;
+        color: rgba(255, 255, 255, 0.863); 
+        text-decoration: none;
+        font-weight: 500;
+    }
 
-.footer {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    margin: 10px;
-    position: relative;
-    top: 20px;
-}
+     .dashboard-links span {
+        font-size: 13px;
+     }
 
-.footer-title {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.612); 
+    .footer {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        margin: 10px;
+        position: relative;
+        top: 20px;
+    }
 
-}
+    .footer-title {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.612); 
 
-.footer p {
-    font-size: 11px;
-    padding-top: 5px;
-    color: rgba(255, 255, 255, 0.529); 
-}
+    }
+
+    .footer p {
+        font-size: 11px;
+        padding-top: 5px;
+        color: rgba(255, 255, 255, 0.529); 
+    }

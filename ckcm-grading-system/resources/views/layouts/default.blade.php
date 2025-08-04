@@ -14,7 +14,7 @@
 
             <div class="main-nav-contents">
 
-                <div class="    ">
+                <div class="nav-header">
                     <img src="{{ asset('system_images/icon.png')}}">
                     <label class="gradient-text">
                         CKCM Grading
@@ -117,7 +117,7 @@
 
         </nav>
 
-    </div> x
+    </div>
     <script>
     document.getElementById('navProfile').addEventListener('click', function () {
         const logoutMenu = document.getElementById('logoutMenu');
