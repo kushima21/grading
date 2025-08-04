@@ -11,10 +11,10 @@
             </form>  
         </div>
         <div class="courseBtn">
-            <button type="button">Create New Course</button>
+            <button type="button" onclick="openCourseModal()">Create New Course</button>
         </div>
     </div>
-    <div class="course-modal-container">
+    <div class="course-modal-container" id="courseModal">
         <h2 class="course-title">Create New Course</h2>
         <div class="course-form">
             <form action="" method="POST">
@@ -64,8 +64,17 @@
                 </div>
                 <div class="button-group">
                     <button type="submit" class="btn btn-primary">Create Course</button>
-                    <button type="button" class="btn btn-secondary" onclick="document.querySelector('.course-modal-container').style.display='none'">Cancel</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeCourseModal()">Cancel</button>
                 </div>
             </form>
     </div>
+  <script>
+function openCourseModal() {
+    document.getElementById("courseModal").style.display = "block";
+}
+
+function closeCourseModal() {
+    document.getElementById("courseModal").style.display = "none";
+}
+</script>
 @endsection
