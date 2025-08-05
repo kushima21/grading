@@ -18,10 +18,10 @@
 }
 
 .course-header input {
-    width: 220px;
+    width: 240px;
     height: 32px;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #e74302;
     border-radius: 4px;
 }
 
@@ -30,12 +30,13 @@
 }
 
 .courseBtn button {
-    width: 120px;
+    width: 125px;
     height: 40px;
     font-size: 11px;
-    border-radius: 8px;
+    border-radius: 11px;
     border: none;
-    box-shadow: 0px 0px 5px 0px rgba(245, 65, 0, 0.904);
+    background: linear-gradient(to right, #773703, #da4704);
+    color: white;
 }
 
 /*course modal container*/
@@ -46,9 +47,10 @@
     height: 55%;
     left: 45%;
     top: 22%;
+    background: white;
     border-radius: 18px;
     position: fixed;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.918);
+    box-shadow: 2px 0px 2px 0px rgba(247, 95, 7, 0.918);
 }
 
 .course-title {
@@ -86,7 +88,7 @@
     margin-bottom: 5px;
     padding-left: 5px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #e74302;
 }
 
 
@@ -94,13 +96,13 @@
     width: 100%;
     padding: 8px;
     height: 38px;
-    border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
     font-size: 14px;
     position: relative;
     z-index: 1;
     margin-top: 5px;
+    border: 1px solid #e74302;
 }
 
 .button-group {
@@ -113,6 +115,36 @@
     margin: 30px;
     height: 40px;
     width: 140px;
-    border-radius: 10px;
+    border-radius: 11px;
     border: none;
+    background: linear-gradient(to right, #773703, #da4704);
+    font-size: 11px;
+    color: white;
+}
+
+.course-table {
+    width: 100%;
+    height: max-content;
+    margin-top: 20px;
+}
+
+.course-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.course-table th, .course-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.course-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.course-table td {
+    font-size: 12px;
 }

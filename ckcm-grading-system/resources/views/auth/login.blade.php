@@ -24,7 +24,7 @@
                 <h2 class="header">Sign in your CKCM Account!</h2>
 
                 <div class="login-form-container">
-                    <form method="POST" action="login">
+                    <form method="POST" action="{{ route('login.post') }}">
                         <label for="email">Id Number or Email</label>
                         <br>
                         <input type="text" name="email" id="name" placeholder="Email & School ID" required>
