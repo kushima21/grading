@@ -18,6 +18,15 @@ Route::get('course', function () {
     return view('admin.course');
 });
 
+Route::get('my_class', function () {
+    return view('instructor.my_class');
+});
+
+Route::get('classes_view', function () {
+    return view('registrar.classes_view');
+});
+
+
 Route::get('/course', [CourseController::class, 'index'])->name('admin.index');
 Route::post('/admin/course', [CourseController::class, 'store'])->name('course.store');
 Route::get('/admin/course/{id}', [CourseController::class, 'edit'])->name('course.edit');

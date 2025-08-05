@@ -123,6 +123,7 @@
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-bell"></i>
             </div>
+            @yield('header')
             @yield('content')
         </div>
 
