@@ -24,29 +24,29 @@
                 </button>
             </div>
         </div>
-@endsection
-@section('content')
-        <div class="classes-view-container">
-            <div class="addStudent-modal" id="addStudentModal">
-                <h2 class="add-student-title">Add New Student</h2>
-            </div>
-            <div class="classes-box-main-container">
-                <div class="student-list" id="studentlist">
-                    <h2>Class Students List</h2>
-                    <form method="GET" action="" class="student-search-form">
-                        <i class="fas fa-search"></i>
-                        <input type="text" name="search" placeholder="Search students..." value="">
-                    </form>
+        @endsection
+        @section('content')
+                <div class="classes-view-container">
+                    <div class="addStudent-modal" id="addStudentModal">
+                        <h2 class="add-student-title">Add New Student</h2>
+                    </div>
+                    <div class="classes-box-main-container">
+                        <div class="student-list" id="studentlist">
+                            <h2>Class Students List</h2>
+                            <form method="GET" action="" class="student-search-form">
+                                <i class="fas fa-search"></i>
+                                <input type="text" name="search" placeholder="Search students..." value="">
+                            </form>
+                        </div>
+                        <div class="student-list" id="gradesscores">
+                            <h2>Grades & Scores</h2>
+                        </div>
+                        <div class="student-list" id="classlist">
+                            <h2>Grades</h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="student-list" id="gradesscores">
-                    <h2>Grades & Scores</h2>
-                </div>
-                <div class="student-list" id="classlist">
-                    <h2>Grades</h2>
-                </div>
-            </div>
-        </div>
-@endsection
+        @endsection
 <script>
     function openAddStudentModal() {
         document.getElementById("addStudentModal").style.display = "block";

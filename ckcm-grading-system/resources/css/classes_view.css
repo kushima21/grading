@@ -128,7 +128,7 @@
     left: 40%;
     border-radius: 14px;
     background-color: white;
-    display: flex;
+    display: none;
 }
 
 .add-student-title {
