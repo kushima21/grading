@@ -9,7 +9,9 @@
 .all-grades {
     padding-top: 10px;
     padding-left: 10px;
+    color: rgb(233, 99, 3);
 }
+
 
 .filtering-grades {
     width: 100%;
@@ -39,17 +41,30 @@
     border-radius: 5px;
 }
 
+.course-info-container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    height: max-content;
+    align-items: center;
+}
+
+.course-info-container h3 {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.526);
+}
+
 .descriptive-header {
     margin: 10px;
     font-size: 18px;
     color: rgba(9, 7, 7, 0.805);
 }
 
-
-.search-student {
-    margin-top: 10px;
-    margin-left: 10px;
+.course-info-container span {
+    font-size: 13px;
 }
+
+
 
 .student-all-grades-container {
     width: 100%;

@@ -33,7 +33,11 @@
                         <option value="">2026-2027</option>
                     </select>
 
-                    <h2 class="descriptive-header">Programming 1</h2>
+                    <div class="course-info-container">
+                        <h3>CS-10</h3>
+                        <h2 class="descriptive-header">Programming 1</h2>
+                        <span>- Marjon D. Senarlo</span>
+                    </div>
                 </form>
             </div>
 
