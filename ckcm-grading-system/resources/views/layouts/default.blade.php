@@ -90,6 +90,7 @@
                         <span>Course</span>
                     </a>
 
+                    {{-- If the role is "registrar" OR "dean" --}}
                     <a href="#">
                         <span>All Grades</span>
                     </a>

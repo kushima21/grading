@@ -25,9 +25,11 @@
 
                 <div class="login-form-container">
                     <form method="POST" action="{{ route('login.post') }}">
+                        @csrf
+
                         <label for="email">Id Number or Email</label>
                         <br>
-                        <input type="text" name="email" id="name" placeholder="Email & School ID" required>
+                        <input type="text" name="login" id="email" placeholder="name@email.com" required>
                         <br>
                         <label for="password">Password</label>
                         <br>
