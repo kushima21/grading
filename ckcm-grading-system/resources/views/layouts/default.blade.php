@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     @vite(['resources/css/default.css', 'resources/js/app.js'])
     <link rel="icon" href="http://www.yourwebsite.com/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="default-container">
@@ -38,10 +39,10 @@
                 <div class="nav-profile" id="navProfile">
                     <img src="{{Auth::user()->avatar ?? asset('system_images/user.png')}}" alt="">
                     <div class="profile">
-                        <label for="">Admin<label>
-                        <p>ID#: 213122321</p>
+                        <label for="">{{ Auth::user()->name ?? 'Registrar Name' }}<label>
+                        <p>ID#: {{ Auth::user()->studentID ?? '000000' }}</p>
                     </div>
-                </div>
+                </div>  
                 <div class="logout" id="logoutMenu">
                     <div class="settings">
                         <div class="email">

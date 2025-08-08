@@ -40,7 +40,7 @@
 .class-list {
     width: 100%;
     max-height: 585px;
-    padding-top: 100px;
+    padding-top: 140px;
     overflow-y: auto;
 }
 
@@ -78,3 +78,11 @@
 .table-class-list  i {
     padding-right: 2px;
 }
+
+/*.grade-scores*/
+
+.grade-scores {
+    display: flex;
+}
+
+

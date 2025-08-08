@@ -39,7 +39,12 @@
                             </form>
                         </div>
                         <div class="student-list" id="gradesscores">
-                            <h2>Grades & Scores</h2>
+                            <h2 class="grades-score-h">Grades & Scores</h2>
+                            <div class="grade-scores">
+                                <form method="POST" action="">
+                                    
+                                </form>
+                            </div>
                         </div>
                         <div class="student-list" id="classlist">
                             <h2>Grades</h2>

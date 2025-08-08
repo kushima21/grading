@@ -149,7 +149,7 @@ class AuthController extends Controller
 
         } catch (\Exception $e) {
             // Log the full error for debugging
-            \Illuminate\Support\Facades\Log::error('Google auth error: ' . $e->getMessage());
+            Log::error('Google auth error: ' . $e->getMessage());
             return redirect('login')->withErrors(['error' => 'Google authentication failed. Please try again or contact support.']);
 
         }

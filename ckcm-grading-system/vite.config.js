@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/css/course.css',
                 'resources/css/my_class.css',
                 'resources/css/classes_view.css',
+                'resources/css/classes.css',
                 'resources/js/app.js',
             ],
             refresh: true,

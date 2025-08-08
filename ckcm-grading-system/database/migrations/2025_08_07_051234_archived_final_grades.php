@@ -11,31 +11,28 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (!Schema::hasTable('final_grade')) {
-            Schema::create('final_grade', function (Blueprint $table) {
+        if (!Schema::hasTable('archived_final_grades')) {
+            Schema::create('archived_final_grades', function (Blueprint $table) {
                 $table->id();
                 $table->integer('classID');
-                $table->string('subject_code')->nullable();
+                $table->string('course_no')->nullable();
                 $table->string('descriptive_title')->nullable();
+                $table->integer('units')->nullable();
                 $table->string('instructor')->nullable();
                 $table->string('academic_period')->nullable();
+                $table->string('academic_year')->nullable();
                 $table->string('schedule')->nullable();
                 $table->integer('studentID');
                 $table->string('name')->nullable();
                 $table->string('gender')->nullable();
                 $table->string('email')->nullable();
-                $table->string('department')->nullable();
+                $table->string('department');
                 $table->decimal('prelim', 5,2);
                 $table->decimal('midterm', 5,2);
                 $table->decimal('semi_finals', 5,2);
                 $table->decimal('final', 5,2);
                 $table->string('remarks')->nullable();
-                $table->text('status')->nullable();
-                $table->text('submit_status')->nullable();
-                $table->text('dean_status')->nullable();
-                $table->text('registrar_status')->nullable();
-                $table->text('dean_comment')->nullable();
-                $table->text('registrar_comment')->nullable();
+                $table->string('status')->nullable();
                 $table->timestamps();
             });
         }
