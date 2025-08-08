@@ -51,6 +51,24 @@ public function update(Request $request, $id)
 
     return redirect()->route('admin.index')->with('success', 'Course updated successfully!');
 }
+public function search(Request $request)
+{
+    $search = $request->input('query');
+
+    if (strlen($search) >= 5) { // example: full course code like "CS 10"
+        $courses = Course::where('course_no', $search)
+            ->select('id', 'course_no', 'descriptive_title')
+            ->limit(1)
+            ->get();
+    } else {
+        $courses = Course::where('course_no', 'LIKE', "$search%")
+            ->select('id', 'course_no', 'descriptive_title')
+            ->limit(5)
+            ->get();
+    }
+
+    return response()->json($courses);
+}
 
 }
 

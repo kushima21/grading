@@ -39,10 +39,17 @@ Route::get('/admin/course/{id}', [CourseController::class, 'edit'])->name('cours
 Route::put('/course/{id}', [CourseController::class, 'update'])->name('course.update');
 Route::delete('/course/{id}', [CourseController::class, 'destroy'])->name('course.destroy');
 Route::get('/users', [UserController::class, 'show'])->name('user.show');
+Route::get('/course-search', [CourseController::class, 'search']);
+Route::get('/instructor-search', [RegistrarController::class, 'searchInstructor']);
+
  
 Route::get("/registrar_dashboard", [RegistrarController::class, "index"])->name('registrar');
 Route::get("/classes", [RegistrarController::class, "registrar_classes"])->name('registrar_classes');
 Route::post("/classes", [RegistrarController::class, "CreateClass"])->name('classes.create');
+
+
+
+
 Route::put("/registrar_dashboard/{class}", [RegistrarController::class, "EditClass"])->name('classes.update');
 Route::delete("/registrar_dashboard/{class}", [RegistrarController::class, "DeleteClass"])->name('classes.destroy');
 Route::get('/classes/{class}', [RegistrarController::class, 'show'])->name('class.show');

@@ -64,20 +64,21 @@
             <h2 class="class-modal-header">
                 Create New Class
             </h2>
-            <form method="POST" action="{{('classes.create')}}">
+            <form method="POST" action="{{ route('classes.create') }}">
                 @csrf
                 @method("POST")
-                <div class="info-container">
+                <div class="info-container" style="position: relative;">
                     <label for="courseSearch">Course No: <em>*Example: GEC 001*</em></label>
                     <input type="text" id="courseSearch" name="course_no" class="form-control"
-                    placeholder="Search for Course No..." value="{{ old('course_no') }}" oninput="filterCourses()" autocomplete="off" required>
+                        placeholder="Search for Course No..." value="{{ old('course_no') }}"
+                        oninput="filterCourses()" autocomplete="off" required>
                     <div id="courseDropdown" class="dropdown-menu"></div>
                 </div>
 
                 <div class="info-container">
                     <label>Descriptive Title:</label>
                     <input type="hidden" id="descriptive_title" name="descriptive_title" value="" readonly>
-                    <p id="descriptive_title_text">
+                    <p id="descriptive_title_text"></p>
                 </div>
 
                 <div class="info-container">
@@ -90,11 +91,11 @@
                     </select>
                 </div>
 
-                <div class="info-container">
+                <div class="info-container" style="position: relative;">
                     <label for="instructorSearch">Instructor</label>
-                    <input type="text" id="instructorSearch" name="instructor" class="form-control" 
-                    placeholder="Search for a instructor...">
-                    <div id="instructorDropdown" class="dropdown-menu">
+                    <input type="text" id="instructorSearch" name="instructor" class="form-control"
+                        placeholder="Search for an instructor..." oninput="filterInstructors()" autocomplete="off">
+                    <div id="instructorDropdown" class="dropdown-menu"></div>
                 </div>
 
                 <div class="info-container">
@@ -124,6 +125,10 @@
                     <input type="text" id="schedule" name="schedule" value="{{ old('schedule') }}" required>
                 </div>
 
+                <input type="hidden" name="added_by" value="{{ Auth::user()->name ?? 'Test User' }}">
+
+
+
                  <div class="info-container">
                     <label for="status" >Status: <em>*automatically active upon adding*</em></label>
                     <input type="status" id="status" name="status" value="Active" readonly>
@@ -147,38 +152,112 @@ function closeClassModal() {
 }
 </script>
 <script>
-    function filterInstructors() {
-        let input = document.getElementById("instructorSearch").value.toLowerCase();
-        let dropdown = document.getElementById("instructorDropdown");
-        dropdown.innerHTML = ""; // Clear previous results
+function filterCourses() {
+    const courseInput = document.getElementById('courseSearch');
+    const descriptiveTitleInput = document.getElementById('descriptive_title');
+    const descriptiveTitleText = document.getElementById('descriptive_title_text');
+    const dropdown = document.getElementById('courseDropdown');
+    const query = courseInput.value.trim();
 
-        if (input.trim() === "") {
-            dropdown.style.display = "none";
-            return;
-        }
+    dropdown.innerHTML = '';
 
-        let instructors = {!! json_encode($instructors) !!}; // Use Blade variable
-        let filtered = instructors.filter(instructor =>
-            instructor.name.toLowerCase().includes(input)
-        );
-
-        if (filtered.length === 0) {
-            dropdown.style.display = "none";
-            return;
-        }
-
-        filtered.forEach(instructor => {
-            let option = document.createElement("div");
-            option.classList.add("dropdown-item");
-            option.textContent = instructor.name;
-            option.onclick = function() {
-                document.getElementById("instructorSearch").value = instructor.name;
-                dropdown.style.display = "none";
-            };
-            dropdown.appendChild(option);
-        });
-
-        dropdown.style.display = "block";
+    if (query.length < 1) {
+        dropdown.style.display = 'none';
+        descriptiveTitleInput.value = '';
+        descriptiveTitleText.textContent = '';
+        return;
     }
+
+    fetch(`/course-search?query=${encodeURIComponent(query)}`)
+        .then(response => response.json())
+        .then(data => {
+            dropdown.innerHTML = '';
+            if (data.length > 0) {
+                data.forEach(course => {
+                    const item = document.createElement('div');
+                    item.classList.add('dropdown-item');
+                    item.textContent = course.course_no;
+                    item.style.cursor = 'pointer';
+
+                    item.addEventListener('click', () => {
+                        courseInput.value = course.course_no;
+                        descriptiveTitleInput.value = course.descriptive_title;
+                        descriptiveTitleText.textContent = course.descriptive_title;
+                        dropdown.style.display = 'none';
+                    });
+
+                    dropdown.appendChild(item);
+                });
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+                descriptiveTitleInput.value = '';
+                descriptiveTitleText.textContent = '';
+            }
+        })
+        .catch(() => {
+            dropdown.style.display = 'none';
+            descriptiveTitleInput.value = '';
+            descriptiveTitleText.textContent = '';
+        });
+}
+
+// Hide dropdown when clicking outside
+document.addEventListener('click', function (e) {
+    const input = document.getElementById('courseSearch');
+    const dropdown = document.getElementById('courseDropdown');
+    if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.style.display = 'none';
+    }
+});
 </script>
+<script>
+function filterInstructors() {
+    const input = document.getElementById('instructorSearch');
+    const dropdown = document.getElementById('instructorDropdown');
+    const query = input.value.trim();
+
+    dropdown.innerHTML = '';
+
+    if (query.length < 1) {
+        dropdown.style.display = 'none';
+        return;
+    }
+
+    fetch(`/instructor-search?query=${encodeURIComponent(query)}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                data.forEach(instructor => {
+                    const item = document.createElement('div');
+                    item.classList.add('dropdown-item');
+                    item.style.cursor = 'pointer';
+                    item.textContent = instructor.name;
+                    item.addEventListener('click', () => {
+                        input.value = instructor.name;
+                        dropdown.style.display = 'none';
+                    });
+                    dropdown.appendChild(item);
+                });
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        })
+        .catch(() => {
+            dropdown.style.display = 'none';
+        });
+}
+
+// Hide dropdown if clicked outside
+document.addEventListener('click', function (e) {
+    const input = document.getElementById('instructorSearch');
+    const dropdown = document.getElementById('instructorDropdown');
+    if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.style.display = 'none';
+    }
+});
+</script>
+
+
 @endsection

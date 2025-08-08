@@ -44,6 +44,20 @@ public function registrar_classes()
     return view('registrar.classes', compact('classes', 'instructors', 'classes_student', 'finalGrades', 'courses'));
 }
 
+public function searchInstructor(Request $request)
+{
+    $query = $request->input('query');
+
+    $instructors = User::where('role', 'LIKE', '%instructor%')
+        ->where('name', 'LIKE', $query . '%')
+        ->select('id', 'name')
+        ->limit(5)
+        ->get();
+
+    return response()->json($instructors);
+}
+
+
 
 public function CreateClass(Request $request)
 {

@@ -14,7 +14,7 @@ return new class extends Migration
         if (!Schema::hasTable('classes')) {
             Schema::create('classes', function (Blueprint $table) {
                 $table->id();
-                $table->string('subject_code');
+                $table->string('course_no');
                 $table->string('descriptive_title');
                 $table->integer('units');
                 $table->string('instructor');
