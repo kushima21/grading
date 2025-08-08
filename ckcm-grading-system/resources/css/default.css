@@ -199,8 +199,9 @@ html, body {
     border-bottom: 1px solid #ddd;
     z-index: 1000;
     position: fixed;
-    background-color: white;
 }
+
+
 
 .content-body {
     width: 100%;

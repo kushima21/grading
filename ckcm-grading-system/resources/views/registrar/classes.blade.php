@@ -17,48 +17,50 @@
             </div>
         </div>
         <div class="classes-class-container">
-            <table class="table-class-list">
-                <thead>
-                    <tr>
-                        <th>Course No</th>
-                        <th>Descriptive Title</th>  
-                        <th>Units</th>
-                        <th>Instructor</th>
-                        <th>Academic Period</th>
-                        <th>Schedule</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>3</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
+    <table class="table-class-list">
+        <thead>
+            <tr>
+                <th>Course No</th>
+                <th>Descriptive Title</th>  
+                <th>Units</th>
+                <th>Instructor</th>
+                <th>Academic Period</th>
+                <th>Schedule</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse ($classes as $class)
+                <tr>
+                    <td>{{ $class->course_no }}</td>
+                    <td>{{ $class->descriptive_title }}</td>
+                    <td>{{ $class->units }}</td>
+                    <td>{{ $class->instructor }}</td>
+                    <td>{{ $class->academic_period }} {{ $class->academic_year }}</td>
+                    <td>{{ $class->schedule }}</td>
+                    <td>{{ $class->status }}</td>
+                    <td>
+                        <a href="#">
+                            <i class="fa-solid fa-up-right-from-square"></i> View Class |
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-pen"></i> Edit 
+                        </a>
+                        <a href="#">
+                            | <i class="fa-solid fa-trash"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            @empty
+                <tr>
+                    <td colspan="8">No classes added yet.</td>
+                </tr>
+            @endforelse
+        </tbody>
+    </table>
+</div>
 
-                            <a href="#">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class |
-                            </a>
-                             <a href="#">
-                                <i class="fa-solid fa-pen"></i>
-                                Edit 
-                            </a>
-                            <a href="#">
-                                |
-                                <i class="fa-solid fa-trash"></i>
-                                delete
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
         <div class="class-modal" id="classModal">
         <div class="modal-container">
             <h2 class="class-modal-header">

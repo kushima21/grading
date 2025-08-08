@@ -24,6 +24,8 @@ class RegistrarController extends Controller
         return view("registrar.registrar_dashboard");
     }
 
+    
+
 public function registrar_classes()
 {
     // Fetch all classes

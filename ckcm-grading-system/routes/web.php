@@ -33,6 +33,10 @@ Route::get('classes', function () {
     return view('registrar.classes');
 });
 
+Route::get('allgrades', function () {
+    return view('registrar.allgrades');
+});
+
 Route::get('/course', [CourseController::class, 'index'])->name('admin.index');
 Route::post('/admin/course', [CourseController::class, 'store'])->name('course.store');
 Route::get('/admin/course/{id}', [CourseController::class, 'edit'])->name('course.edit');
@@ -46,6 +50,7 @@ Route::get('/instructor-search', [RegistrarController::class, 'searchInstructor'
 Route::get("/registrar_dashboard", [RegistrarController::class, "index"])->name('registrar');
 Route::get("/classes", [RegistrarController::class, "registrar_classes"])->name('registrar_classes');
 Route::post("/classes", [RegistrarController::class, "CreateClass"])->name('classes.create');
+Route::get("/classes", [RegistrarController::class, "registrar_classes"])->name('registrar_classes');
 
 
 
