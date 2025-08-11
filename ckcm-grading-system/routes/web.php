@@ -37,6 +37,10 @@ Route::get('allgrades', function () {
     return view('registrar.allgrades');
 });
 
+Route::get('studentlist', function () {
+    return view('registrar.studentlist');
+});
+
 Route::get('/course', [CourseController::class, 'index'])->name('admin.index');
 Route::post('/admin/course', [CourseController::class, 'store'])->name('course.store');
 Route::get('/admin/course/{id}', [CourseController::class, 'edit'])->name('course.edit');

@@ -13,6 +13,7 @@ export default defineConfig({
                 'resources/css/classes_view.css',
                 'resources/css/classes.css',
                 'resources/css/allgrades.css',
+                'resources/css/studentList.css',
                 'resources/js/app.js',
             ],
             refresh: true,

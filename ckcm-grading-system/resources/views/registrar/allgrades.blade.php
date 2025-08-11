@@ -51,7 +51,11 @@
                         <th>Department</th>
                         <th>Academic Period</th>
                         <th>Academic Year</th>
-                        <th>Action</th>
+                        <th>Prelim</th>
+                        <th>MidTerm</th>
+                        <th>Semi Finals</th>
+                        <th>Final</th>
+                        <th>Remarks</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,12 +66,11 @@
                         <td>Bachelor of Science in Computer Science</td>
                         <td>1st Semester</td>
                         <td>2025-2026</td>
-                        <td>
-                            <a href="#">
-                                <i class="fa-solid fa-up-right-from-square"></i> 
-                                view class
-                            </a>
-                        </td>
+                        <td>1.90</td>
+                        <td>2.0</td>
+                        <td>3.0</td>
+                        <td>2.7</td>
+                        <td>Passed</td>
                     </tr>
                 </tbody>
             </table>
