@@ -7,11 +7,17 @@
             <h2 class="classes-view-title1">Classes Details</h2>
             <h2 class="classes-view-title2">Classes Details</h2>
             <div class="classes-details-container">
-                <p><strong>Course No:</strong> CS10</p>
-                <p><strong>Instructor:</strong> Hondrada John Mark</p>
-                <p><strong>Academic Period:</strong> 1st Semester</p>
-                <p><strong>Schedule:</strong> Mon 10:30am - 12:00pm</p>
-                <p><strong>Status:</strong> Active</p>
+                <p><strong>Course No:</strong> {{ $classes->course_no}}</p>
+                <p><strong>Instructor:</strong> {{ $classes->instructor}}</p>
+                <p><strong>Academic Period:</strong> {{ $classes->academic_period}}</p>
+                <p><strong>Schedule:</strong> {{ $classes->schedule}}</p>
+                <p>
+                <strong>Status:</strong>
+                    <span class="status {{ strtolower($classes->status) }}">
+                        {{ $classes->status }}
+                    </span>
+                </p>
+
             </div>
             <div class="classes-link-container">
                  <ul>
@@ -59,7 +65,7 @@
                                         <input type="text" id="name" name="name" class="form-control" required readonly>
                                     </div>
                                     <div class="info-add">
-                                        <label for="gender">Gender</label>
+                                        <l for="gender">Gender</l   abel>
                                         <input type="text" id="gender" name="gender" class="form-control" required readonly>
                                     </div>
                                     <div class="info-add">
@@ -75,7 +81,7 @@
                                             <i class="fa-solid fa-file-arrow-up"></i>
                                             Add Student
                                         </button>
-                                        <button type="button">Cancel</button>
+                                        <button type="button" onclick="closeAddStudentModal()">Cancel</button>
                                     </div>
                                 </form>
                             </div>

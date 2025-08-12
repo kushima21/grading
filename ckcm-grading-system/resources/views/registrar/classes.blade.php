@@ -41,9 +41,10 @@
                     <td>{{ $class->schedule }}</td>
                     <td>{{ $class->status }}</td>
                     <td>
-                        <a href="#">
+                        <a href="{{ route('class.show', $class->id) }}">
                             <i class="fa-solid fa-up-right-from-square"></i> View Class |
                         </a>
+
                         <a href="#">
                             <i class="fa-solid fa-pen"></i> Edit 
                         </a>
