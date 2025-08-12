@@ -15,7 +15,7 @@ return new class extends Migration
             Schema::create('archived_final_grades', function (Blueprint $table) {
                 $table->id();
                 $table->integer('classID');
-                $table->string('course_no')->nullable();
+                $table->string('subject_code')->nullable();
                 $table->string('descriptive_title')->nullable();
                 $table->integer('units')->nullable();
                 $table->string('instructor')->nullable();

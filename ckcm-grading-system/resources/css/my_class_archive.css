@@ -1,0 +1,122 @@
+.my-archive-container {
+       width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+}
+
+.my-archive-header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 9%;
+    z-index: 1000;
+}
+
+.class-archive-heading {
+    padding-left: 10px;
+        font-size: 25px;
+        color: rgb(224, 62, 3);
+        padding-top: 5px;
+}
+
+.filter-form {
+    margin: 10px
+}
+
+.filter-form select{
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.filter-form input {
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.filter-form button {
+    margin-left: 5px;
+    width: 120px;
+    height: 35px;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(rgba(238, 86, 5, 0.924), rgb(244, 108, 34));
+    color: white;
+}
+
+.class-archive-container {
+    width: 100%;
+    margin-top: 11%;
+}
+
+
+.class-archive-container {
+    width: 100%;
+    margin-top: 11%;
+}
+
+.folder {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+}
+
+.folder-content {
+    padding-left: 30px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.course-content {
+    padding-left: 45px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.result-content-container {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.result-content {
+    width: 90%;
+    height: 420px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    display: none;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.instructor-header {
+    font-size: 12px;
+}
+.decriptive-title-header {
+    font-size: 12px;
+}
+
+.schedule-header {
+    font-size: 12px;
+}

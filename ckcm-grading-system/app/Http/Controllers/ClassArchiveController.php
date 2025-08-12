@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Auth; // Import Auth
 use App\Models\ArchivedFinalGrade;
 use App\Models\Classes;
 use App\Models\User;
-use App\Models\Course;
-
 use TCPDF;
 
 
@@ -49,14 +47,14 @@ class ClassArchiveController extends Controller
             $query->where('academic_year', $request->academic_year);
         }
 
-        if ($request->has('course_no') && $request->course_no != '') {
-            $query->where('course_no', 'LIKE', '%' . $request->course_no . '%');
+        if ($request->has('subject_code') && $request->subject_code != '') {
+            $query->where('subject_code', 'LIKE', '%' . $request->subject_code . '%');
         }
 
         $records = $query->orderBy('academic_year', 'desc')
             ->orderBy('academic_period')
             ->orderBy('descriptive_title')
-            ->orderBy('course_no')
+            ->orderBy('subject_code')
             ->get();
 
         // Get unique instructors for the dropdown
@@ -73,7 +71,7 @@ class ClassArchiveController extends Controller
             ->map(function ($yearGroup) use ($termOrder) {
                 return $yearGroup->groupBy('academic_period')
                     ->map(function ($periodGroup) use ($termOrder) {
-                        return $periodGroup->groupBy('course_no') // Subject Code should be grouped here
+                        return $periodGroup->groupBy('subject_code') // Subject Code should be grouped here
                             ->map(function ($subjectGroup) use ($termOrder) {
                                 return $subjectGroup->groupBy('instructor') // Now, group by Instructor
                                     ->map(function ($instructorGroup) use ($termOrder) {
@@ -90,7 +88,7 @@ class ClassArchiveController extends Controller
             });
 
         $finalGrades = ArchivedFinalGrade::all()->groupBy(function ($item) {
-            return $item->academic_year . '|' . $item->academic_period . '|' . $item-> course_no . '|' . $item->instructor . '|' . $item->descriptive_title . '|' . $item->studentID;
+            return $item->academic_year . '|' . $item->academic_period . '|' . $item->subject_code . '|' . $item->instructor . '|' . $item->descriptive_title . '|' . $item->studentID;
         });
 
         return view('instructor.my_class_archive', compact('archivedData', 'uniqueInstructors', 'finalGrades'));
@@ -123,7 +121,7 @@ class ClassArchiveController extends Controller
     {
         $academic_year = $request->academic_year;
         $academic_period = $request->academic_period;
-        $course_no = $request->course_no;
+        $subject_code = $request->subject_code;
         $instructor = $request->instructor;
         $descriptive_title = $request->descriptive_title;
 
@@ -131,7 +129,7 @@ class ClassArchiveController extends Controller
         $finalGrades = \App\Models\ArchivedFinalGrade::where([
             ['academic_year', $academic_year],
             ['academic_period', $academic_period],
-            ['course_no', $course_no],
+            ['subject_code', $subject_code],
             ['instructor', $instructor],
             ['descriptive_title', $descriptive_title],
         ])->orderBy('department')->orderBy('name')->get();
@@ -142,7 +140,7 @@ class ClassArchiveController extends Controller
 
 
         // Get the user who archived the grades (added_by from archived_final_grades)
-        // $approvedBy = '_________________________';
+        // $approvedBy = '___________________________';
         // if ($finalGrades->count() > 0 && $finalGrades->first()->added_by) {
         //     $approvedBy = $finalGrades->first()->added_by;
         // }
@@ -188,7 +186,7 @@ class ClassArchiveController extends Controller
 
             $pdf->AddPage();
 
-            $approvedBy = $programHeads[$mainDept] ?? '_________________________';
+            $approvedBy = $programHeads[$mainDept] ?? '___________________________';
 
 
             $schoolLogo = public_path('system_images/logo.jpg'); // left logo
@@ -230,7 +228,7 @@ class ClassArchiveController extends Controller
                     <td><b>Date:</b> ' . date('m/d/Y') . '</td>
                 </tr>
                 <tr>
-                    <td><b>Course Code:</b> ' . $course_no . '</td>
+                    <td><b>Course Code:</b> ' . $subject_code . '</td>
                     <td><b>AY:</b> ' . $academic_year . '</td>
                 </tr>
                 <tr>

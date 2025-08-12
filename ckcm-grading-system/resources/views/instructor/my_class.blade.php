@@ -25,185 +25,28 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr><tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr><tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr><tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CS101</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>Hondrada John Mark</td>
-                        <td>1st Semester</td>
-                        <td>Mon 7:30am - 10:00am</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="">
-                                <i class="fa-solid fa-up-right-from-square"></i>
-                                View Class
-                            </a>
-                        </td>
-                    </tr>
+                    @foreach ($classes as $class)
+                <tr>
+                    <td>{{ $class->id }}</td>
+                    <td>{{ $class->subject_code }}</td>
+                    <td>{{ $class->descriptive_title }}</td>
+                    <td>{{ $class->instructor }}</td>
+                    <td>{{ $class->academic_period }}</td>
+                    <td>{{ $class->schedule }}</td>
+
+                    <td
+                        class="status {{ strtolower($class->status) }}">{{ $class->status }}</td>
+
+
+                    <td style="text-align:center; background-color: var(--color9b);">
+                        <!-- Edit Button -->
+                        <a href="{{ route('class.show', $class->id) }}" class="view-btn"><i
+                                class="fa-solid fa-up-right-from-square"></i> View Class</a>
+
+                    </td>
+                </tr>
+
+            @endforeach
                 </tbody>
             </table>
         </div>

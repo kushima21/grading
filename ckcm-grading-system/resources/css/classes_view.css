@@ -3,7 +3,7 @@
     width:100%;
     height: max-content;
     top: 9%;
-    z-index: 1100000;
+    z-index: 1000;
     position: absolute;
     background-color: white;
 }
@@ -119,19 +119,116 @@
 
 
 .addStudent-modal {
-    width: 440px;
-    height: 420px;
+    width: 450px;
+    height: max-content;
     box-shadow: 0px 0px 10px rgb(0, 0, 0) ;
     position: fixed;
-    top: 32%;
+    top: 4%;
     left: 40%;
     border-radius: 14px;
     background-color: white;
     display: none;
+    z-index: 2000;
+    padding-bottom: 15px;
 }
 
 .add-student-title {
     text-align: center;
     padding-top: 12px;
     font-size: 18px;
+}
+
+.csv-container {
+     flex-wrap: wrap;
+     width: 100%;
+     display: flex;
+     padding-top: 10px;
+     justify-content: center;
+     height: max-content;
+}
+
+.csv-container form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.csv-container input {
+    width: 90%;
+    height: 40px;
+   margin-bottom: 10px;
+   border: 1px solid black;
+   display: flex;
+   border-radius: 7px;
+}
+.csv-container input[type="file"] {
+    width: 90%;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    text-align: center;       /* Horizontal center */
+    line-height: 40px;        /* Vertical center */
+    padding-left: 10px;
+}
+
+.save-btn {
+    width: 200px;    
+    height: 35px;
+    border-radius: 7px;
+    border: none;
+    background: linear-gradient(rgb(255, 51, 0), rgb(193, 60, 4));
+    color: white;
+    font-size: 12px;
+}
+
+.csv-p {
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.add-student-indi {
+    width: 100%;
+    flex-wrap: wrap;
+     width: 100%;
+     padding-top: 10px;
+     justify-content: center;
+     height: max-content;
+}
+
+.add-student-indi form {
+    max-width: 410px; /* optional: para dili kaayo lapad */
+    margin-left: 20px;
+}
+
+.info-add {
+    display: flex;
+    flex-direction: column; /* label sa taas, input sa ubos */
+    margin-bottom: 15px;
+}
+
+.info-add label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 12px;
+}
+
+.info-add input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-studentBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-studentBtn button {
+    width: 120px;
+    height: 35px;
+    border-radius: 6px;
+    font-size: 12px;
+    border: none;
+    background: linear-gradient(rgb(255, 0, 0) green);
 }

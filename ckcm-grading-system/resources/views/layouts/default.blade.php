@@ -47,40 +47,59 @@
                     <div class="settings">
                         <div class="email">
                             <p>Signed in as</p>
-                            <p>admin@ckcm.edu.ph</p>
+                            <p>{{ Auth::user()->email ?? '@email' }}</p>
                         </div>
 
                         <div class="account">
                             <a href="#">Settings</a>
                         </div>
                         <div class="account">
-                            <a href="#">Sign out</a>
+                            <form method="POST" action="{{('logout')}}">
+                                @csrf
+                                <button type="submit" class="logout-btn">
+                                    Logout
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
                 
                 <div class="dashboard-links">
                     <label for="">DASHBOARD</label>
-                    <a href="#">
+                    <a href="{{ route('index') }}" class="{{ Request::is('/') ? 'active' : '' }}">
                         <span>Home</span>
                     </a>
-                    <a href="#">
+                    @if (Auth::check() && str_contains(Auth::user()->role, 'student') || str_contains(Auth::user()->role, 'admin'))
+                    <a href="{{ route('my_grades') }}" class="{{ Request::is('my_grades') ? 'active' : '' }}" >
                         <span>My Grades</span>
                     </a>
+                    @endif
 
                     <label for="">MANAGE</label>
 
-                    <a href="#">
+                     {{-- If the role is "instructor" --}}
+                    @if (Auth::check() && str_contains(Auth::user()->role, 'instructor') || str_contains(Auth::user()->role, 'admin'))
+                    <a href="{{ route('instructor.my_class') }}" class="{{ Request::is('my_class') ? 'active' : '' }}">
                         <span>My Class</span>
                     </a>
+                    @endif
+                    {{-- End instructor --}}
 
-                    <a href="#">
+                    {{-- If the role is "dean" --}}
+                    @if (Auth::check() && str_contains(Auth::user()->role, 'instructor') || str_contains(Auth::user()->role, 'admin'))
+                    <a href="{{ route('instructor.my_class_archive') }}"  class="{{ Request::is('my_class_archive') ? 'active' : '' }}">
                         <span>My Class Archive</span>
                     </a>
+                     @endif
+                    {{-- End dean --}}
 
-                    <a href="#">
+                    {{-- If the role is "registrar" OR "dean" --}}
+                    @if (Auth::check() && (str_contains(Auth::user()->role, 'dean') || str_contains(Auth::user()->role, 'registrar') || str_contains(Auth::user()->role, 'admin')))
+                    <a href="{{ route('show.grades') }}" class="{{ Request::is('allgrades') ? 'active' : '' }}">
                         <span>All Classes</span>
                     </a>
+                     @endif
+                    {{-- End dean and registrar --}}
 
                      <a href="#">
                         <span>Student List</span>

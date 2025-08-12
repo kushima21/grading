@@ -14,6 +14,7 @@ export default defineConfig({
                 'resources/css/classes.css',
                 'resources/css/allgrades.css',
                 'resources/css/studentList.css',
+                'resources/css/my_class_archive.css',
                 'resources/js/app.js',
             ],
             refresh: true,
